@@ -16,5 +16,4 @@ def SimpleEvents():
 if __name__ == "__main__":
     p = 0.2   # Вероятность наступления события
     n = 200   # Количество событий
-
     print(_SimpleEvents(p, n))

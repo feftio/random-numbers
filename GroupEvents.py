@@ -4,7 +4,7 @@ from tools import prevsum, normalize
 
 def _GroupEvents(p, n):
     if (sum(p) < 0.9999999999999999):
-        raise NameError("Сумма вероятностей не равна 1.")
+        raise Exception('Сумма значений вероятностей не равна 1.')
     seq = [random() for _ in range(n)]
     p = prevsum(p)
     k = [0] * (len(p))
@@ -16,12 +16,12 @@ def _GroupEvents(p, n):
     return k
 
 def GroupEvents():
-    print("Вы выбрали линейный конгруэнтный метод.")
+    print('Вы выбрали моделирование группы событий.')
     p = [float(v) for v in input('Введите через пробел набор вероятностей наступления событий (p): ').split()]
     n = int(input('Введите количество событий (n): '))
-    print(_GroupEvents(p, n))
+    print(_GroupEvents(p, n)) 
 
 if __name__ == "__main__":
-    p = [0.5, 0.5]   # Набор вероятностей наступления событий
-    n = 200          # Количество событий
+    p = [0.1, 0.2, 0.3, 0.4]   # Набор вероятностей наступления событий
+    n = 100                    # Количество событий
     print(_GroupEvents(p, n))
