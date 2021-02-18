@@ -8,3 +8,7 @@ def prevsum(l):
         for j in range(i + 1):
             ln[i] += l[j]
     return ln
+
+def freqconvert(m):
+    s = sum(m)
+    return ([x / s for x in m])
