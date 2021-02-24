@@ -6,6 +6,7 @@ def _GroupEvents(p, n):
     if (sum(p) < 0.9999999999999999):
         raise Exception('Сумма значений вероятностей не равна 1.')
     seq = [random() for _ in range(n)]
+    # seq = normalize(_LCG(405, 117, 6925, 32760, 2))
     p = prevsum(p)
     k = [0] * (len(p))
     for z in seq:
@@ -23,5 +24,5 @@ def GroupEvents():
 
 if __name__ == "__main__":
     p = [0.1, 0.2, 0.3, 0.4]   # Набор вероятностей наступления событий
-    n = 100                    # Количество событий
+    n = 2                      # Количество событий
     print(_GroupEvents(p, n))
