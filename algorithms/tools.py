@@ -6,17 +6,17 @@ def normalize(numbers):
     return [((number - MIN) / (MAX - MIN)) for number in numbers]
 
 
-def prevsum(l):
-    ln = [0] * (len(l))
-    for i in range(len(l)):
+def prevsum(probs):
+    _probs = [0] * (len(probs))
+    for i in range(len(probs)):
         for j in range(i + 1):
-            ln[i] += l[j]
-    return ln
+            _probs[i] += probs[j]
+    return _probs
 
 
-def freqconvert(m):
-    s = sum(m)
-    return ([x / s for x in m])
+def freqconvert(probs):
+    _sum = sum(probs)
+    return ([prob / _sum for prob in probs])
 
 
 def digits_up(number):
@@ -37,7 +37,3 @@ def digits_down(number):
         number, counter = Decimal(str(number)) / 10, counter + 1
     number = float(number)
     return number, counter
-
-
-if __name__ == '__main__':
-    print(digits_up(0.33432))
