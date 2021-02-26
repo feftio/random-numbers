@@ -19,6 +19,6 @@ def _ComplexEvent(p1, p2, n):
     return k
 
 if __name__ == '__main__':
-    p1, p2 = 0.15, 0.2    # Вероятность события p1 и p2
-    n = 100               # Число испытаний
+    p1, p2 = 0.15, 0.2   # Вероятности
+    n = 1000             # Число испытаний
     print(_ComplexEvent(p1, p2, n))
