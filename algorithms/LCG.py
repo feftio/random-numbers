@@ -1,9 +1,9 @@
-def _LCG(a, z, c, m, n):
-    r = []
+def _LCG(a, z, c, m, count):
+    sequence = []
     for _ in range(n):
-        z = (a * z + c) % m
-        r.append(z)
-    return r
+        number = (a * z + c) % m
+        sequence.append(number)
+    return sequence
 
 
 def LCG():
@@ -18,8 +18,8 @@ def LCG():
 
 if __name__ == "__main__":
     a = 7   # Множитель
-    z = 8   # Начальное значение
-    c = 8   # Значение приращения
-    m = 9   # Значение модуля
-    n = 4   # Количесвто генерируемых чисел
+    z = 3   # Начальное значение
+    c = 5   # Значение приращения
+    m = 4   # Значение модуля
+    n = 5   # Количесвто генерируемых чисел
     print(_LCG(a, z, c, m, n))
