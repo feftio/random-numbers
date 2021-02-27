@@ -9,13 +9,13 @@ def _GroupEvents(probs, count):
         raise Exception('Сумма значений вероятностей не равна 1.')
     sequence = [random() for _ in range(count)]
     probs = prevsum(probs)
-    k = [0] * (len(probs))
+    frequency = [0] * (len(probs))
     for number in sequence:
         for i in range(len(probs)):
             if number <= probs[i]:
-                k[i] += 1
+                frequency[i] += 1
                 break
-    return k
+    return frequency
 
 
 def GroupEvents():

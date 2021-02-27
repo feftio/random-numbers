@@ -1,4 +1,4 @@
-def _LCG(a, z, c, m, count):
+def _LCG(a, z, c, m, n):
     sequence = []
     for _ in range(n):
         number = (a * z + c) % m

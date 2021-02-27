@@ -2,15 +2,15 @@ from tools import digits_up, digits_down
 
 
 def MSM():
-    print('Вы выбрали метод середины квадратов.')
+    print('Вы выбрали метод середины квадрата.')
     number = int(input('Введите начальное значение (number): '))
     count = int(input('Введите количество генерируемых чисел (count): '))
     print(_MSM(number, count))
 
 
-def _MSM(number, n):
+def _MSM(number, count):
     sequence = []
-    for _ in range(n):
+    for _ in range(count):
         (number, counter) = digits_up(number) if (
             number > -1 and number < 1) else (number, len(str(number)))
         number = int(number ** 2 %
@@ -27,5 +27,5 @@ def _MSM(number, n):
 
 if __name__ == "__main__":
     number = 5556   # Начальное значение
-    count = 100        # Количество генерируемых чисел
+    count = 100     # Количество генерируемых чисел
     print(_MSM(number, count))

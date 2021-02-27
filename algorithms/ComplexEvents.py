@@ -1,5 +1,6 @@
 from random import random
 
+
 def _ComplexEvent(p1, p2, n):
     k = [0] * 4
     for j in range(n):
@@ -17,6 +18,11 @@ def _ComplexEvent(p1, p2, n):
             k[3] += 1
             continue
     return k
+
+
+def ComplexEvents():
+    pass
+
 
 if __name__ == '__main__':
     p1, p2 = 0.15, 0.2   # Вероятности

@@ -1,8 +1,8 @@
 def _GeometricDist(p, n):
-    s, q = [], 1 - p
+    sequence, q = [], 1 - p
     for i in range(1, n + 1):
-        s.append(q ** (i - 1) * p)
-    return s
+        sequence.append(q ** (i - 1) * p)
+    return sequence
 
 def GeometricDist():
     pass
