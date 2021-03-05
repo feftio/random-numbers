@@ -18,7 +18,7 @@ def _MSM(number, count):
         sequence.append(digits_down(number)[0])
     return sequence
 
-    # number = int(number % (10 ** 6) / (10 ** 2)) # 4  counter = 7
+    # number = int(number % (10 ** 6) / (10 ** 2)) # 4 counter = 7
     # number = int(number % (10 ** 7) / (10 ** 2)) # 5 counter = 9
     # number = int(number % (10 ** 9) / (10 ** 3)) # 6 counter = 11
     # number = int(number % (10 ** 10) / (10 ** 3)) # 7 counter = 13
@@ -26,6 +26,6 @@ def _MSM(number, count):
 
 
 if __name__ == "__main__":
-    number = 5556   # Начальное значение
-    count = 100     # Количество генерируемых чисел
+    number = 0.5556   # Начальное значение
+    count = 10        # Количество генерируемых чисел
     print(_MSM(number, count))
