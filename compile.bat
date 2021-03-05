@@ -1,1 +1,1 @@
-pyinstaller --icon=icon.ico --paths=algorithms/ main.py
+pyinstaller --onefile --icon=icon.ico --paths=algorithms/ main.py
