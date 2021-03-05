@@ -1,4 +1,4 @@
-def _Golenko(n, p, k, a, c, m, x, s):
+def _GolenkoMethod(n, p, k, a, c, m, x, s):
     r = []
     for i in range(n):
         if (i == s * p):
@@ -10,7 +10,7 @@ def _Golenko(n, p, k, a, c, m, x, s):
         s = s + 1
     return r
 
-def Golenko():
+def GolenkoMethod():
     print('Вы выбрали метод возмущений Голенко.')
     n = int(input('Введите количество генерируемых чисел (n): '))
     p = int(input('Введите период возумщений (p): '))
@@ -20,7 +20,7 @@ def Golenko():
     m = int(input('Введите значение модуля (m): '))
     x = int(input('Введите начальное значение (x): '))
     s = int(input('Введите значение итератора (s): '))
-    print(_Golenko(n, p, k, a, c, m, x, s)) 
+    print(_GolenkoMethod(n, p, k, a, c, m, x, s)) 
 
 if __name__ == "__main__":
     n = 10      # Моделируемые события
@@ -31,4 +31,4 @@ if __name__ == "__main__":
     m = 42782   # Модуль
     x = 120     # Начальное значение
     s = 1       # Итератор
-    print(_Golenko(n, p, k, a, c, m, x, s))
+    print(_GolenkoMethod(n, p, k, a, c, m, x, s))
