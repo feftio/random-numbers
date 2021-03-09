@@ -2,9 +2,9 @@ from math import e, factorial as fac
 
 
 def _PoissonDistribution(p, n):
-    sequence, l = [], n * p
+    sequence, lmd = [], n * p
     for m in range(n):
-        sequence.append(((l ** m) * (e ** (-l))) / fac(m))
+        sequence.append(((lmd ** m) * (e ** (-lmd))) / fac(m))
     return sequence
 
 

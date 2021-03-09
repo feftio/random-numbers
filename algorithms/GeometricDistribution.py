@@ -4,8 +4,10 @@ def _GeometricDistribution(p, n):
         sequence.append(q ** (i - 1) * p)
     return sequence
 
+
 def GeometricDistribution():
     pass
+
 
 if __name__ == '__main__':
     p = 0.5  # Вероятность

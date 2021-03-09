@@ -2,7 +2,7 @@ from random import random
 
 
 def _ConditionalProbability(pa, pb, pba, n=10):
-    frequencies, pbA = [0] * 4, (pb - pa * pba) / (1 - pa)
+    frequencies, pb_a = [0] * 4, (pb - pa * pba) / (1 - pa)
     for i in range(n):
         z1, z2 = random(), random()
         if z1[i] < pa:
@@ -11,7 +11,7 @@ def _ConditionalProbability(pa, pb, pba, n=10):
             else:
                 frequencies[1] += 1
         else:
-            if z2[i] < pbA:
+            if z2[i] < pb_a:
                 frequencies[2] += 1
             else:
                 frequencies[3] += 1

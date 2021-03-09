@@ -3,6 +3,9 @@ from random import random
 sys.path.append('./algorithms')
 
 
+''' Метод обратной функции '''
+
+
 def ReverseMethod(f, n):
     sequence = []
     for _ in range(n):
