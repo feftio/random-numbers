@@ -1,6 +1,6 @@
 from LCG import _LCG
 from random import random
-from tools import prevsum, normalize, freqconvert
+from utils import prevsum, normalize, freqconvert
 from decimal import Decimal
 
 

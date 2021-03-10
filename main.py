@@ -1,25 +1,31 @@
 import sys
 sys.path.append('algorithms')
 
-from algorithms.GolenkoMethod import GolenkoMethod
-from algorithms.DevisMethod import DevisMethod
-from algorithms.MSM import MSM
-from algorithms.LCG import LCG
-from algorithms.SimpleEvents import SimpleEvents
-from algorithms.GroupEvents import GroupEvents
 from algorithms.ComplexEvents import ComplexEvents
+from algorithms.ConditionalProbability import ConditionalProbability
+from algorithms.DevisMethod import DevisMethod
+from algorithms.GeometricDistribution import GeometricDistribution
+from algorithms.GolenkoMethod import GolenkoMethod
+from algorithms.GroupEvents import GroupEvents
+from algorithms.LCG import LCG
+from algorithms.MSM import MSM
+from algorithms.PoissonDistribution import PoissonDistribution
+from algorithms.SimpleEvents import SimpleEvents
 
 from printer import Printer
 
 algorithms = {
-    'Метод возмущений Голенко': GolenkoMethod,
+    'Сложные события': ComplexEvents,
+    'Условная вероятность': ConditionalProbability,
     'Метод Дэвиса': DevisMethod,
-    'Метод середины квадрата': MSM,
+    'Геометрическое распределение': GeometricDistribution,
+    'Метод возмущений Голенко': GolenkoMethod,
+    'Групповые события': GroupEvents,
     'Линейный конгруэнтный метод': LCG,
-    'Моделирование простых событий': SimpleEvents,
-    'Моделирование групповых событий': GroupEvents
+    'Метод середины квадрата': MSM,
+    'Распределение Пуассона': PoissonDistribution,
+    'Простые события': SimpleEvents
 }
 
-rp = Printer(algorithms)
-rp.cycle()
-
+printer = Printer(algorithms)
+printer.cycle()

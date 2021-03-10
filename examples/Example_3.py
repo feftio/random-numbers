@@ -6,7 +6,7 @@ sys.path.append('./algorithms')
 ''' Метод обратной функции '''
 
 
-def ReverseMethod(f, n):
+def _ReverseMethod(f, n):
     sequence = []
     for _ in range(n):
         z = random()
@@ -19,4 +19,4 @@ if __name__ == '__main__':
 
     def f(z):   # Интегрированная функцияч распределения (Плотность)
         return 1 - (1 - z)
-    print(ReverseMethod(f, n))
+    print(_ReverseMethod(f, n))

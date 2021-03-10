@@ -1,4 +1,4 @@
-def _DevisMethod(s, n, m):
+def _DevisMethod(s, n, m) -> list:
     p = len(s) - 1
     for j in range(n):
         t = s[p + j] + s[j]
@@ -8,13 +8,12 @@ def _DevisMethod(s, n, m):
     return s[p + 1:]
 
 
-def DevisMethod():
-    print('Вы выбрали метод Дэвиса.')
-    s = [float(v) for v in input(
-        'Введите через пробел миниимум два начальных значения (s): ').split()]
-    n = int(input('Введите количество генерируемых чисел (n): '))
-    m = int(input('Введите значение модуля (m): '))
-    print(_DevisMethod(s, n, m))
+def DevisMethod(cli, name):
+    s = cli.float_list(
+        'Введите через пробел миниимум два начальных значения (s): ')
+    n = cli.int('Введите количество генерируемых чисел (n): ')
+    m = cli.int('Введите значение модуля (m): ')
+    cli.table(['Число'], _DevisMethod(s, n, m), autoheader='Номер')
 
 
 if __name__ == "__main__":

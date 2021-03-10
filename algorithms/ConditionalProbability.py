@@ -18,7 +18,7 @@ def _ConditionalProbability(pa, pb, pba, n=10):
     return frequencies
 
 
-def ConditionalProbability():
+def ConditionalProbability(cli, name):
     pass
 
 

@@ -5,11 +5,11 @@ def _GeometricDistribution(p, n):
     return sequence
 
 
-def GeometricDistribution():
+def GeometricDistribution(cli, name):
     pass
 
 
 if __name__ == '__main__':
     p = 0.5  # Вероятность
     n = 5    # Количество событий
-    print(sum(_GeometricDistribution(p, n)))
+    print(_GeometricDistribution(p, n))

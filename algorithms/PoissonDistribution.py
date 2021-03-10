@@ -8,8 +8,8 @@ def _PoissonDistribution(p, n):
     return sequence
 
 
-def PoissonDistribution():
-    pass
+def PoissonDistribution(io):
+    io.out()
 
 
 if __name__ == '__main__':

@@ -1,18 +1,25 @@
-from functools import wraps
-
-
-START_DECORATOR = '=====================================\nВыберите необходимый алгоритм из списка:'
-END_DECORATOR = '====================================='
+from cli import cli
+from rich import box
 
 
 class Printer:
-    
+
     def __init__(self, algorithms):
         self.algorithms = algorithms
 
-    def cycle():
-        while (True):
-            
+    def all(self):
+        cli.table(['Название'], list(
+            self.algorithms.keys()), autoheader='Номер')
+
+    def choose(self):
+        index = cli.int('Введите [magenta]номер[/magenta] алгоритма: ') - 1
+        return list(self.algorithms.values())[index](cli, list(self.algorithms.keys())[index])
+
+    def cycle(self):
+        while True:
+            self.all()
+            self.choose()
+            cli.wait()
 
 
 if __name__ == '__main__':

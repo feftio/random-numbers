@@ -20,7 +20,7 @@ def _ComplexEvent(p1, p2, n):
     return k
 
 
-def ComplexEvents():
+def ComplexEvents(cli):
     pass
 
 

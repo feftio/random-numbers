@@ -1,5 +1,7 @@
 import sys
 from random import random
+import matplotlib.pyplot as plt
+import numpy as np
 sys.path.append('./algorithms')
 
 from tools import fun_max, is_belong_over, is_belong_under
@@ -8,35 +10,32 @@ from tools import fun_max, is_belong_over, is_belong_under
 ''' Метод исключения Неймана '''
 
 
-# def _NeumannMethod(f, a, b, n):
-#     M = f(fun_max(f, a, b))
-#     x, y = [], []
-#     for i in range(n):
-#         z1, z2 = random(), random()
-#         x.append(a + z1 * (b - a))
-#         y.append(M * z2)
-
-#     return x
-
 def _NeumannMethod(f, a, b, n):
-    M = f(fun_max(f, a, b))
-    z1, z2 = 0.75, 0.2
-    x = a + z1 * (b - a)
-    y = M * z2
-
+    M, x, y = f(fun_max(f, a, b)), [], []
+    while(len(x) != n):
+        z1, z2 = random(), random()
+        xp, yp = a + z1 * (b - a), M * z2
+        if (yp < M) and (xp > a) and (xp < b) and (yp > 0) and is_belong_under(f, xp, yp):
+            x.append(xp)
+            y.append(yp)
     return x, y
-
-
-def NeumannMethod():
-    pass
 
 
 if __name__ == '__main__':
     a = 1
     b = 5
-    n = 10
+    n = 100
 
     def f(x):
         return 2 * x + x ** 2
 
-    print(_NeumannMethod(f, a, b, n))
+    result = _NeumannMethod(f, a, b, n)
+    print(result[0])
+
+    x_fun = np.linspace(a, b, 100)
+    plt.plot(x_fun, f(x_fun))
+    plt.plot(result[0], result[1], 'o', ms=2)
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.title('_NeumannMethod')
+    plt.show()

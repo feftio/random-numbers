@@ -9,7 +9,7 @@ def _SimpleEvents(p, n):
     return k
 
 
-def SimpleEvents():
+def SimpleEvents(io):
     print('Вы выбрали моделирование простых событий.')
     p = float(input('Введите вероятность наступления события (p): '))
     n = int(input('Введите количество событий (n): '))
