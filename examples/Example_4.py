@@ -1,10 +1,11 @@
 import sys
+sys.path.append('./algorithms')
+
 from random import random
 import matplotlib.pyplot as plt
 import numpy as np
-sys.path.append('./algorithms')
 
-from tools import fun_max, is_belong_over, is_belong_under
+from utils import fun_max, is_belong_over, is_belong_under
 
 
 ''' Метод исключения Неймана '''
@@ -26,8 +27,10 @@ if __name__ == '__main__':
     b = 5
     n = 100
 
+    # exec(open("C:\\Users\\admin\\Desktop\\Projects\\random-numbers\\examples\\function.py").read())
+
     def f(x):
-        return 2 * x + x ** 2
+        return 2 * x + x ** 4
 
     result = _NeumannMethod(f, a, b, n)
     print(result[0])
