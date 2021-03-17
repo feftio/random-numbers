@@ -27,10 +27,10 @@ if __name__ == '__main__':
     b = 5
     n = 100
 
-    # exec(open("C:\\Users\\admin\\Desktop\\Projects\\random-numbers\\examples\\function.py").read())
+    exec(open("C:\\Users\\admin\\Desktop\\Projects\\random-numbers\\examples\\function.py").read())
 
-    def f(x):
-        return 2 * x + x ** 4
+    # def f(x):
+    #     return 2 * x + x ** 4
 
     result = _NeumannMethod(f, a, b, n)
     print(result[0])
