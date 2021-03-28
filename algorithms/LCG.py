@@ -3,7 +3,7 @@ def _LCG(a, z, c, m, n):
     for _ in range(n):
         number = (a * sequence[len(sequence) - 1] + c) % m
         sequence.append(number)
-    return sequence
+    return sequence[1:]
 
 
 def LCG():
@@ -18,8 +18,8 @@ def LCG():
 
 if __name__ == "__main__":
     a = 7   # Множитель
-    z = 7   # Начальное значение
-    c = 7   # Значение приращения
-    m = 8   # Значение модуля
+    z = 8   # Начальное значение
+    c = 8   # Значение приращения
+    m = 9   # Значение модуля
     n = 3   # Количесвто генерируемых чисел
     print(_LCG(a, z, c, m, n))

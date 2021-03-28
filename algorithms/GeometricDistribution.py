@@ -10,6 +10,6 @@ def GeometricDistribution(cli, name):
 
 
 if __name__ == '__main__':
-    p = 0.5  # Вероятность
-    n = 5    # Количество событий
+    p = 0.23  # Вероятность
+    n = 10    # Количество событий
     print(_GeometricDistribution(p, n))
