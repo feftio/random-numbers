@@ -13,7 +13,7 @@ class Printer:
 
     def choose(self):
         index = cli.int('Введите [magenta]номер[/magenta] алгоритма: ') - 1
-        key = list(self.algorithms.keys())[index - 1]
+        key = list(self.algorithms.keys())[index]
         self.algorithms[key](cli, name=key)
 
     def cycle(self):
@@ -23,6 +23,8 @@ class Printer:
                 self.choose()
             except IndexError:
                 cli.out('Алгоритма с введенным номером нет в списке.')
+            except Exception as e:
+                cli.out(e)
             cli.wait()
 
 
