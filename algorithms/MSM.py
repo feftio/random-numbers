@@ -24,7 +24,6 @@ def _MSM(number, count):
     # number = int(number % (10 ** 10) / (10 ** 3)) # 7 counter = 13
     # number = int(number % (10 ** 12) / (10 ** 4)) # 8 counter = 15
 
-
 if __name__ == "__main__":
     number = 0.8933   # Начальное значение
     count = 3        # Количество генерируемых чисел

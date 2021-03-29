@@ -13,7 +13,8 @@ def LCG(cli, name):
     c = cli.int('Введите значение приращения (c): ')
     m = cli.int('Введите значение модуля (m): ')
     n = cli.int('Введите количество генерируемых чисел (n): ')
-    cli.table(['Число'], _LCG(a, z, c, m, n), autoheader='Номер')
+    cli.table(['Число'], _LCG(a, z, c, m, n),
+              autoheader='z(i)', autoformat='z({})')
 
 
 if __name__ == "__main__":
