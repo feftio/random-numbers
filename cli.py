@@ -25,14 +25,14 @@ class cli:
         console.input()
 
     @staticmethod
-    def table(headers, rows, *args, autoheader=None, **kwargs):
+    def table(headers, rows, *args, autoheader=None, autostart=1, autoformat='{}', **kwargs):
         table = Table(show_header=True,
                       header_style='magenta', *args, **kwargs)
         rows = items_to_string(rows)
         if isinstance(autoheader, str):
             table.add_column(autoheader)
             for i in range(len(rows)):
-                rows[i].insert(0, str(i + 1))
+                rows[i].insert(0, autoformat.format(i + autostart))
         for header in headers:
             table.add_column(str(header))
         for row in rows:
