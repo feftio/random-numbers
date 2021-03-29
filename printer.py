@@ -11,20 +11,21 @@ class Printer:
         cli.table(['Название'], list(
             self.algorithms.keys()), autoheader='Номер')
 
-    def choose(self):
-        index = cli.int('Введите [magenta]номер[/magenta] алгоритма: ') - 1
-        key = list(self.algorithms.keys())[index]
-        self.algorithms[key](cli, name=key)
+    def choose(self, index=None):
+        index = cli.int(
+            'Введите [magenta]номер[/magenta] алгоритма: ') - 1 if index is None else index - 1
+        try:
+            key = list(self.algorithms.keys())[index]
+            self.algorithms[key](cli, key)
+        except IndexError:
+            cli.out('Алгоритма с введенным номером нет в списке.')
+        except Exception as e:
+            cli.out(e)
 
     def cycle(self):
         while True:
             self.all()
-            try:
-                self.choose()
-            except IndexError:
-                cli.out('Алгоритма с введенным номером нет в списке.')
-            except Exception as e:
-                cli.out(e)
+            self.choose()
             cli.wait()
 
 
