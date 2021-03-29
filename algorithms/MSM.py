@@ -1,13 +1,6 @@
 from utils import digits_up, digits_down
 
 
-def MSM():
-    print('Вы выбрали метод середины квадрата.')
-    number = int(input('Введите начальное значение (number): '))
-    count = int(input('Введите количество генерируемых чисел (count): '))
-    print(_MSM(number, count))
-
-
 def _MSM(number, count):
     sequence = []
     for _ in range(count):
@@ -24,7 +17,16 @@ def _MSM(number, count):
     # number = int(number % (10 ** 10) / (10 ** 3)) # 7 counter = 13
     # number = int(number % (10 ** 12) / (10 ** 4)) # 8 counter = 15
 
+
+def MSM(cli, name):
+    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
+    number = cli.float('Введите начальное значение (z0): ')
+    count = cli.int('Введите количество генерируемых чисел (n): ')
+    cli.table(['Число'], _MSM(number, count),
+              autoheader='z(i)', autoformat='z({})')
+
+
 if __name__ == "__main__":
     number = 0.8933   # Начальное значение
-    count = 3        # Количество генерируемых чисел
+    count = 3         # Количество генерируемых чисел
     print(_MSM(number, count))
