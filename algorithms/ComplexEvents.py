@@ -20,11 +20,11 @@ def _ComplexEvent(p1, p2, n):
     return k
 
 
-def ComplexEvents(cli):
-    p1, p2 = cli.float_list(
-        'Введите два значения вероятности событий(p1, p2): ')
-    n = cli.int('Введите количество событий(n): ')
-    cli.table(['AB', '!AB', 'A!B', '!A!B'], [_ComplexEvent(p1, p2, n)])
+def ComplexEvents(cli, name):
+    p = cli.float_list(
+        'Введите два значения вероятности событий через пробел (p1, p2): ')
+    n = cli.int('Введите количество событий (n): ')
+    cli.table(['AB', '!AB', 'A!B', '!A!B'], [_ComplexEvent(p[0], p[1], n)])
 
 
 if __name__ == '__main__':
