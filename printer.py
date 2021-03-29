@@ -12,9 +12,9 @@ class Printer:
             self.algorithms.keys()), autoheader='Номер')
 
     def choose(self, index=None):
-        index = cli.int(
-            'Введите [magenta]номер[/magenta] алгоритма: ') - 1 if index is None else index - 1
         try:
+            index = cli.int(
+                'Введите [magenta]номер[/magenta] алгоритма: ') - 1 if index is None else index - 1
             key = list(self.algorithms.keys())[index]
             self.algorithms[key](cli, key)
         except IndexError:
