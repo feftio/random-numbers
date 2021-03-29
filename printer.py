@@ -20,7 +20,7 @@ class Printer:
         except IndexError:
             cli.out('Алгоритма с введенным номером нет в списке.')
         except Exception as e:
-            cli.out(e)
+            cli.out(e.__class__.__name__, "|", e)
 
     def cycle(self):
         while True:
