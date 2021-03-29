@@ -21,8 +21,8 @@ class cli:
         console.print(*args, **kwargs)
 
     @staticmethod
-    def wait():
-        console.input()
+    def wait(*args, **kwargs):
+        console.input(*args, **kwargs)
 
     @staticmethod
     def table(headers, rows, *args, autoheader=None, autostart=1, autoformat='{}', **kwargs):

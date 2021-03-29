@@ -26,7 +26,7 @@ class Printer:
         while True:
             self.all()
             self.choose()
-            cli.wait()
+            cli.wait('Нажмите [cyan]Enter[/cyan] чтобы продолжить...')
 
 
 if __name__ == '__main__':
