@@ -26,6 +26,6 @@ def _MSM(number, count):
 
 
 if __name__ == "__main__":
-    number = 2475   # Начальное значение
-    count = 10        # Количество генерируемых чисел
+    number = 0.8933   # Начальное значение
+    count = 3        # Количество генерируемых чисел
     print(_MSM(number, count))
