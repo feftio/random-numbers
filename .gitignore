@@ -1,0 +1,4 @@
+__pycache__/
+build/
+algorithms/__pycache__/
+*.spec
