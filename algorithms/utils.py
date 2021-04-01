@@ -1,5 +1,5 @@
 from decimal import Decimal
-from scipy import optimize as opt
+# from scipy import optimize as opt
 
 
 def normalize(numbers):
@@ -40,8 +40,8 @@ def digits_down(number):
     return number, counter
 
 
-def fun_max(f, a, b):
-    return round(opt.fminbound(lambda x: -f(x), a, b))
+# def fun_max(f, a, b):
+#     return round(opt.fminbound(lambda x: -f(x), a, b))
 
 
 def is_belong_over(f, x, y):
