@@ -3,11 +3,11 @@
 block_cipher = None
 
 
-a = Analysis(['.'],
-             pathex=['C:\\Users\\admin\\Desktop\\Projects\\random-numbers'],
+a = Analysis(['main.py'],
+             pathex=['algorithms/', 'env\\Lib\\site-packages', 'C:\\Users\\admin\\Desktop\\Projects\\random-numbers'],
              binaries=[],
              datas=[],
-             hiddenimports=['LCG'],
+             hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],
@@ -23,11 +23,11 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='',
+          name='main',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )
+          console=True , icon='icon.ico')

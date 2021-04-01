@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['algorithms/', 'C:\\Users\\admin\\Desktop\\Projects\\random-numbers'],
+             pathex=['algorithms/', 'env\\Lib\\site-packages', 'C:\\Users\\admin\\Desktop\\Projects\\random-numbers'],
              binaries=[],
              datas=[],
              hiddenimports=[],
