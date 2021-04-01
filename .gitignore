@@ -1,6 +1,4 @@
 __pycache__/
-dist/
 build/
-build/main/
+dist/
 algorithms/__pycache__/
-*.spec
