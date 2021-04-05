@@ -9,11 +9,11 @@ def _SimpleEvents(p, n):
     return k
 
 
-def SimpleEvents(io):
-    print('Вы выбрали моделирование простых событий.')
-    p = float(input('Введите вероятность наступления события (p): '))
-    n = int(input('Введите количество событий (n): '))
-    print(_SimpleEvents(p, n))
+def SimpleEvents(cli, name):
+    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
+    p = cli.float('Введите вероятность наступления события (p): ')
+    n = cli.int('Введите количество событий (n): ')
+    cli.out(_SimpleEvents(p, n))
 
 
 if __name__ == "__main__":
