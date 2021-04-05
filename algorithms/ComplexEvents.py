@@ -3,7 +3,7 @@ from random import random
 
 def _ComplexEvent(p1, p2, n):
     k = [0] * 4
-    for j in range(n):
+    for _ in range(n):
         z1, z2 = random(), random()
         if z1 <= p1 and z2 <= p2:
             k[0] += 1
@@ -21,6 +21,7 @@ def _ComplexEvent(p1, p2, n):
 
 
 def ComplexEvents(cli, name):
+    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     p = cli.float_list(
         'Введите два значения вероятности событий через пробел (p1, p2): ')
     n = cli.int('Введите количество событий (n): ')
