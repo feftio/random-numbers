@@ -5,7 +5,7 @@ from algorithms.ComplexEvents import ComplexEvents
 from algorithms.ConditionalProbability import ConditionalProbability
 from algorithms.DevisMethod import DevisMethod
 from algorithms.GeometricDistribution import GeometricDistribution
-from algorithms.GolenkoMethod import GolenkoMethod
+# from algorithms.GolenkoMethod import GolenkoMethod
 from algorithms.GroupEvents import GroupEvents
 from algorithms.LCG import LCG
 from algorithms.MSM import MSM
@@ -19,7 +19,7 @@ algorithms = {
     'Условная вероятность': ConditionalProbability,
     'Метод Дэвиса': DevisMethod,
     'Геометрическое распределение': GeometricDistribution,
-    'Метод возмущений Голенко': GolenkoMethod,
+    # 'Метод возмущений Голенко': GolenkoMethod,
     'Групповые события': GroupEvents,
     'Линейный конгруэнтный метод': LCG,
     'Метод середины квадрата': MSM,
