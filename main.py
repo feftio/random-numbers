@@ -10,6 +10,7 @@ from algorithms.GroupEvents import GroupEvents
 from algorithms.LCG import LCG
 from algorithms.MSM import MSM
 from algorithms.PoissonDistribution import PoissonDistribution
+from algorithms.PoissonProcess import PoissonProcess
 from algorithms.SimpleEvents import SimpleEvents
 
 from printer import Printer
@@ -24,6 +25,7 @@ algorithms = {
     'Линейный конгруэнтный метод': LCG,
     'Метод середины квадрата': MSM,
     'Распределение Пуассона': PoissonDistribution,
+    'Простейший поток': PoissonProcess,
     'Простые события': SimpleEvents
 }
 
