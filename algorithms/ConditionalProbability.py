@@ -2,20 +2,20 @@ from random import random
 
 
 def _ConditionalProbability(pa, pba, pb_a, n):
-    frequencies = [0] * 4
+    frequency = [0] * 4
     for _ in range(n):
         z1, z2 = random(), random()
         if z1 < pa:
             if z2 < pba:
-                frequencies[0] += 1
+                frequency[0] += 1
             else:
-                frequencies[1] += 1
+                frequency[1] += 1
         else:
             if z2 < pb_a:
-                frequencies[2] += 1
+                frequency[2] += 1
             else:
-                frequencies[3] += 1
-    return frequencies
+                frequency[3] += 1
+    return frequency
 
 
 def ConditionalProbability(cli, name):
