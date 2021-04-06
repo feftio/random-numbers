@@ -9,6 +9,7 @@ def _DevisMethod(s, n, m):
 
 
 def DevisMethod(cli, name):
+    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     s = cli.float_list(
         'Введите через пробел миниимум два начальных значения (z0, z1...): ')
     m = cli.int('Введите значение модуля (m): ')
