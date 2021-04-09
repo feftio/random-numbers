@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "random-numbers",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
