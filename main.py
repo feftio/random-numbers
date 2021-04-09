@@ -1,6 +1,3 @@
-import sys
-sys.path.append('algorithms')
-
 from algorithms.ComplexEvents import ComplexEvents
 from algorithms.ConditionalProbability import ConditionalProbability
 from algorithms.DevisMethod import DevisMethod
