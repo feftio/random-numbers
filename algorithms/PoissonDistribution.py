@@ -8,8 +8,12 @@ def _PoissonDistribution(p, n):
     return sequence
 
 
-def PoissonDistribution(io):
-    io.out()
+def PoissonDistribution(cli, name):
+    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
+    p = cli.float('Введите значение вероятности: ')
+    n = cli.int('Введите количество событий: ')
+    cli.table(['Число'], _PoissonDistribution(p, n),
+              autoheader='z(i)', autoformat='z({})')
 
 
 if __name__ == '__main__':
