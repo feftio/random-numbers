@@ -1,4 +1,4 @@
-from utils import digits_up, digits_down
+from algorithms.utils import digits_up, digits_down
 
 
 def _MSM(z, n):

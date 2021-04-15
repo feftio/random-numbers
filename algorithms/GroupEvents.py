@@ -1,5 +1,5 @@
 from random import random
-from utils import prevsum
+from algorithms.utils import prevsum
 
 
 def _GroupEvents(p, n):
