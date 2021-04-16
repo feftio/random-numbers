@@ -1,6 +1,7 @@
 from algorithms.ComplexEvents import ComplexEvents
 from algorithms.ConditionalProbability import ConditionalProbability
 from algorithms.DevisMethod import DevisMethod
+from algorithms.ErlangProcess import ErlangProcess
 from algorithms.GeometricDistribution import GeometricDistribution
 # from algorithms.GolenkoMethod import GolenkoMethod
 from algorithms.GroupEvents import GroupEvents
@@ -16,6 +17,7 @@ algorithms = {
     'Сложные события': ComplexEvents,
     'Условная вероятность': ConditionalProbability,
     'Метод Дэвиса': DevisMethod,
+    'Потоки Эрланга': ErlangProcess,
     'Геометрическое распределение': GeometricDistribution,
     # 'Метод возмущений Голенко': GolenkoMethod,
     'Групповые события': GroupEvents,
