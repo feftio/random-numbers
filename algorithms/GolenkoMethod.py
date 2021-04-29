@@ -13,7 +13,6 @@ def _GolenkoMethod(n, p, k, a, c, m, x, s):
 
 
 def GolenkoMethod():
-    print('Вы выбрали метод возмущений Голенко.')
     n = int(input('Введите количество генерируемых чисел (n): '))
     p = int(input('Введите период возумщений (p): '))
     k = int(input('Введите число разрядов (k): '))

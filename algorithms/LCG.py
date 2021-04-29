@@ -7,7 +7,6 @@ def _LCG(a, z, c, m, n):
 
 
 def LCG(cli, name):
-    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     a = cli.int('Введите множитель (a): ')
     z = cli.int('Введите начальное значение (z): ')
     c = cli.int('Введите значение приращения (c): ')

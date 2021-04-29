@@ -12,7 +12,6 @@ def _ErlangProcess(lm, k, t):
 
 
 def ErlangProcess(cli, name):
-    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     lm = cli.float('Введите интенсивность потока (lm): ')
     t = cli.int('Введите время (t): ')
     k = cli.int('Введите порядок (k): ')

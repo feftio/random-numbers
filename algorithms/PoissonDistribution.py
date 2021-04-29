@@ -9,7 +9,6 @@ def _PoissonDistribution(p, n):
 
 
 def PoissonDistribution(cli, name):
-    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     p = cli.float('Введите значение вероятности: ')
     n = cli.int('Введите количество событий: ')
     cli.table(['Число'], _PoissonDistribution(p, n),

@@ -7,7 +7,7 @@ def _MSM(z, n):
         (z, counter) = digits_up(z) if (
             z > -1 and z < 1) else (z, len(str(z)))
         z = int(z ** 2 %
-                     (10 ** (counter + counter // 2)) / (10 ** (counter // 2)))
+                (10 ** (counter + counter // 2)) / (10 ** (counter // 2)))
         sequence.append(digits_down(z)[0])
     return sequence
 
@@ -19,7 +19,6 @@ def _MSM(z, n):
 
 
 def MSM(cli, name):
-    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     z0 = cli.float('Введите начальное значение (z0): ')
     n = cli.int('Введите количество генерируемых чисел (n): ')
     cli.table(['Число'], _MSM(z0, n),

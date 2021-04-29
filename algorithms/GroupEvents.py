@@ -18,7 +18,6 @@ def _GroupEvents(p, n):
 
 
 def GroupEvents(cli, name):
-    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     p = cli.float_list(
         'Введите через пробел набор вероятностей событий (p1 p2 ...): ')
     n = cli.int('Введите количество событий (n): ')

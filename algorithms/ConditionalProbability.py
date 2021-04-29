@@ -19,7 +19,6 @@ def _ConditionalProbability(pa, pba, pb_a, n):
 
 
 def ConditionalProbability(cli, name):
-    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     pa = cli.float('Введите значение вероятности A (pa): ')
     pba = cli.float(
         'Введите значение вероятности B, если событие A произойдет (pba): ')

@@ -6,7 +6,6 @@ def _GeometricDistribution(p, n):
 
 
 def GeometricDistribution(cli, name):
-    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     p = cli.float('Введите значение вероятности: ')
     n = cli.int('Введите количество событий: ')
     cli.table(['Число'], _GeometricDistribution(p, n),

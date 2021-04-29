@@ -14,7 +14,6 @@ def _PoissonProcess(lm, n):
 
 
 def PoissonProcess(cli, name):
-    cli.out(f'Вы выбрали [magenta]{name}[/magenta].')
     lm = cli.float('Введите интенсивность потока (lm): ')
     n = cli.int('Введите время (t): ')
     cli.table(['Время'], _PoissonProcess(lm, n),

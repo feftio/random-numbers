@@ -15,8 +15,9 @@ class Printer:
         try:
             index = cli.int(
                 'Введите [magenta]номер[/magenta] алгоритма: ') - 1 if index is None else index - 1
-            key = list(self.algorithms.keys())[index]
-            self.algorithms[key](cli, key)
+            algorithm_name = list(self.algorithms.keys())[index]
+            cli.out(f'Вы выбрали [magenta]{algorithm_name}[/magenta].')
+            self.algorithms[algorithm_name](cli, algorithm_name)
         except IndexError:
             cli.out('Алгоритма с введенным номером нет в списке.')
         except Exception as e:
